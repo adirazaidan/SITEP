@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.homeScreen.HomeFragment">
+
+    <!-- AppBar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_blue"
+        app:titleCentered="true"
+        app:title="@string/app_bar_tittle"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/TextAppearance.BebasNeue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Banner -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner"
+        android:elevation="6dp"
+        app:shapeAppearanceOverlay="@style/TopBannerMain"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo di atas Banner -->
+    <ImageView
+        android:id="@+id/logoElektro"
+        android:layout_width="80dp"
+        android:layout_height="82dp"
+        android:layout_margin="8dp"
+        android:elevation="8dp"
+        android:src="@drawable/logo_elektro"
+        app:layout_constraintBottom_toBottomOf="@id/ivBanner"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/menuGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:alignmentMode="alignMargins"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBanner"
+        app:rowCount="3"
+        app:useDefaultMargins="true">
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/historyBtn"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/history"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sejarah"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/visiMisiBtn"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/visimisi"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visi Misi"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/prodiBtn"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/graduation"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prodi"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fasilitasBtn"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/company"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fasilitas"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dosenBtn"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/professor"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_dosen"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu-item -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/staffBtn"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/cardIcon"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/grouping"
+                    android:contentDescription="@string/card_image" />
+
+                <TextView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_staff"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bebas_neue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

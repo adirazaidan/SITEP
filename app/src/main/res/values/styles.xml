@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/red</item>
+    </style>
+
+    <style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/bebas_neue</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TopBannerMain" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+    </style>
+
+
+    <style name="TextAppearance.BebasNeue" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/bebas_neue</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
+
+
+
+</resources>

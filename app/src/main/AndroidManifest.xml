@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ElektroPolnepMobile"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.staffScreen.DetailStaffInformatikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staffScreen.DetailStaffElektronikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staffScreen.DetailStaffListrikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staffScreen.MenuStaffActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.fasilitasScreen.DetailFasilitasInformatikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.fasilitasScreen.DetailFasilitasElektronikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.fasilitasScreen.DetailFasilitasListrikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.fasilitasScreen.MenuFasilitasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dosenScreen.DetailDosenInformatikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dosenScreen.DetailDosenElektronikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dosenScreen.DetailDosenListrikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dosenScreen.MenuProfilDosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.prodiScreen.DetailProdiInformatikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.prodiScreen.DetailProdiElektronikaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.prodiScreen.DetailProdiListrikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.prodiScreen.MenuProdiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.visiMisiScreen.VisiMisiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SejarahScreen.SejarahActivity"
+            android:exported="false" />
+        <activity android:name=".ui.MainActivity" />
+        <activity
+            android:name=".ui.splashScreen.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

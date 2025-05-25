@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.prodiScreen.DetailProdiInformatikaActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_blue"
+        app:titleCentered="true"
+        app:title="@string/app_bar_tittle"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/TextAppearance.BebasNeue"
+        app:navigationIcon="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivGambarDetailProdiInformatika"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+    <!-- Bungkus TextView dengan ScrollView agar bisa di-scroll -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivGambarDetailProdiInformatika"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvDeskripsiProdiInformatika"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_prodi_informatika"
+            android:fontFamily="@font/bebas_neue"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="4dp"
+            android:justificationMode="inter_word"
+            android:textAlignment="viewStart"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
